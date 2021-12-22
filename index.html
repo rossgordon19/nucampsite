@@ -63,13 +63,13 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col" for="date">Number of Campers:</label>
+                                <label class="col" for="date">Date:</label>
                                 <div class="col-sm-6">
                                     <input class="form-control" type="date" id="date" name="date" placeholder="Date">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="Campsite Type" class="col-sm-6 form-label"></label>
+                                <label for="Campsite Type" class="col-sm-6 form-label">Campsite Type:</label>
                                 <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-success active">
                                         <input type="radio" name="options" id="siteTent" autocomplete="off" checked>
@@ -211,54 +211,52 @@
                     <button class="btn btn-danger btn-sm" id="carouselButton">
                         <i class="fa fa-pause"></i>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Discover & Review</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg"
+                        alt="Breadcrumb Trail" />
+                    <div class="media-body align-self-center">
+                        <h3>Our Campsites</h3>
+                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave
+                            your
+                            own reviews!</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Discover & Review</h2>
-                </div>
-                <div class="col">
-                    <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg"
-                            alt="Breadcrumb Trail" />
-                        <div class="media-body align-self-center">
-                            <h3>Our Campsites</h3>
-                            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave
-                                your
-                                own reviews!</p>
-                        </div>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+                <h2>Featured Campsites</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this
+                            campground
+                            on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                     </div>
+                    <img class="d-flex img-thumbnail float-right" src="img/react-lake-thumb.jpg" alt="React Lake" />
                 </div>
             </div>
+        </div>
 
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 col-md-3">
-                    <h2>Featured Campsites</h2>
-                </div>
-                <div class="col">
-                    <div class="media">
-                        <div class="media-body align-self-center">
-                            <h3>React Lake Campground</h3>
-                            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this
-                                campground
-                                on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                        </div>
-                        <img class="d-flex img-thumbnail float-right" src="img/react-lake-thumb.jpg" alt="React Lake" />
-                    </div>
-                </div>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Our Community Partners</h2>
             </div>
-
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Our Community Partners</h2>
-                </div>
-                <div class="col">
-                    <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png"
-                            alt="Bootstrap Outfitters" />
-                    </div>
+            <div class="col">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
                     <div class="media-body align-self-center">
                         <h3>Bootstrap Outfitters</h3>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you
@@ -267,6 +265,7 @@
                 </div>
             </div>
         </div>
+
 
         <footer class="site-footer">
             <div class="container">
@@ -307,9 +306,11 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <script>
-            $(function() {
-                $(".carousel").carousel( { interval: 2000 } );
-                $("#carouselButton").click(function(){
+            $(function () {
+                $(".carousel").carousel({
+                    interval: 2000
+                });
+                $("#carouselButton").click(function () {
                     if ($("#carouselButton").children("i").hasClass("fa-pause")) {
                         $(".carousel").carousel("pause");
                         $("#carouselButton").children("i").removeClass("fa-pause");
